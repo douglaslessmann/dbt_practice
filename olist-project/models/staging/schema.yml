@@ -1,0 +1,37 @@
+
+version: 2
+
+models:
+    - name: stg_products
+      description: "A table with a summary of all items bought by the client"
+      columns:
+          - name: product_pk
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+
+    - name: stg_orders
+      description: "A table with all orders and its primary key. This table show the client, the status of the order and the dates. But, this table dont show what items the client bought"
+      columns:
+          - name: order_pk
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+
+    - name: stg_order_items
+      description: "A table with all items that the client bought in the order"
+      columns:
+          - name: order_fk
+            description: "The key for the order. Its not unique because one order can have more than onde product."
+            tests:
+                - not_null
+          - name: product_fk
+            description: "The key for the product"
+            tests:
+                - not_null
+          - name: seller_fk
+            description: "The key for the seller"
+            tests:
+                - not_null
