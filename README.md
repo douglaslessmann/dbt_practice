@@ -9,16 +9,16 @@ sudo -u postgres psql
 
 create database olist;
 
-create user myuser with encrypted password 'mypass';
+create user douglas with encrypted password '3640';
 
-grant all privileges on database olist to myuser;
+grant all privileges on database olist to douglas;
 
 ```
 
 It's important to add your database to you dbt profile
 
 ```
-code /home/my_path/.dbt/profiles.yml
+code /home/douglas/.dbt/profiles.yml
 
 ```
 And add

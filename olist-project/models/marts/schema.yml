@@ -3,7 +3,7 @@ version: 2
 
 models:
     - name: fct_orders
-      description: "A table with all products and its primary key"
+      description: "A table with a summary of all items bought by the client"
       columns:
           - name: order_product_sk
             description: "The primary key for this table"

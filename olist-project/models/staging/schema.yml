@@ -3,7 +3,7 @@ version: 2
 
 models:
     - name: stg_products
-      description: "A table with a summary of all items bought by the client"
+      description: "A table with all products and its primary key"
       columns:
           - name: product_pk
             description: "The primary key for this table"
